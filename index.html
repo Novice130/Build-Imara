@@ -117,6 +117,18 @@
         .text-shadow-hero {
             text-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
+        /* Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-100 { transition-delay: 100ms; }
+        .reveal-delay-200 { transition-delay: 200ms; }
     </style>
 </head>
 <body class="bg-surface selection:bg-primary-container selection:text-white">
@@ -221,7 +233,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
 <!-- Architecture (Primary) -->
-<div class="md:col-span-8 bg-surface-container-low rounded-2xl overflow-hidden group relative p-12 flex flex-col justify-end">
+<div class="md:col-span-8 bg-surface-container-low rounded-2xl overflow-hidden group relative p-12 flex flex-col justify-end reveal">
 <div class="absolute inset-0 z-0">
 <img alt="Modern architectural lines" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJcUrm7IXxmXfuoOGupYWOCBzuRUuD9gIEjovqVsyJq0OGsqgn6m7VJMWGU5tn9g_JAD7hTEImw5djhqd8HNldL_rltE9d2MVrX_7442Z7JI7oPBv6PeQzbFWqwWmPOsMarZMJush_d8mERd6smEZqxd53DQ3PLAW3t_BM_cyVu_VXIJZeocD4cu0onbOMjUALxgClYcneeKz54MNBdDBrtFd2_J8RvQBgl5aik5K9kxCIR1YfUKYShjqlX8iCL0DHFZWb0IgLh34"/>
 </div>
@@ -235,7 +247,7 @@
 </div>
 </div>
 <!-- 2D/3D Floor Plans -->
-<div class="md:col-span-4 bg-primary text-white rounded-2xl overflow-hidden group relative p-10 flex flex-col">
+<div class="md:col-span-4 bg-primary text-white rounded-2xl overflow-hidden group relative p-10 flex flex-col reveal reveal-delay-100">
 <span class="material-symbols-outlined text-5xl text-on-primary-container mb-8" data-icon="architecture">architecture</span>
 <h3 class="font-manrope font-bold text-3xl mb-4">Design Services (2D/3D)</h3>
 <p class="font-workSans text-on-primary-container/80 text-sm leading-loose mb-8">See before you build. 2D architectural drawings, 3D rendered visualizations, and VR walkthroughs ensure total confidence before breaking ground.</p>
@@ -244,7 +256,7 @@
 </div>
 </div>
 <!-- House Construction -->
-<div class="md:col-span-5 bg-surface-container-highest rounded-2xl overflow-hidden group relative p-10 flex flex-col justify-between">
+<div class="md:col-span-12 bg-surface-container-highest rounded-2xl overflow-hidden group relative p-10 flex flex-col justify-between reveal reveal-delay-200">
 <div class="space-y-4">
 <h3 class="font-manrope font-bold text-2xl text-primary">Renovation & Addition</h3>
 <p class="font-workSans text-on-surface-variant text-sm">Expand without relocating or modernize your existing structure. We provide structural assessments, phased renovations, and smart budget planning.</p>
@@ -272,7 +284,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- ECO -->
-<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col items-start shadow-sm">
+<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col items-start shadow-xl hover:-translate-y-2 reveal">
 <div class="text-tertiary font-workSans text-xs font-bold uppercase tracking-widest mb-2">Sustainable & Budget</div>
 <h3 class="font-manrope font-bold text-3xl text-primary mb-4">ECO</h3>
 <div class="mb-6"><span class="text-4xl font-extrabold text-on-background">₹25L</span> <span class="text-on-surface-variant text-sm border-b-2 border-transparent">Starts at</span></div>
@@ -285,7 +297,7 @@
 <button class="w-full bg-surface-container-highest text-primary py-3 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-primary-container hover:text-white transition-colors">Select Plan</button>
 </div>
 <!-- MODULAR -->
-<div class="bg-primary rounded-2xl p-8 border border-primary text-white shadow-xl flex flex-col items-start transform md:-translate-y-4">
+<div class="bg-primary rounded-2xl p-8 border border-primary text-white shadow-2xl flex flex-col items-start transform md:-translate-y-4 hover:-translate-y-6 transition-all reveal reveal-delay-100">
 <div class="text-secondary-fixed font-workSans text-xs font-bold uppercase tracking-widest mb-2">Most Popular</div>
 <h3 class="font-manrope font-bold text-3xl mb-4">MODULAR</h3>
 <div class="mb-6"><span class="text-4xl font-extrabold text-white">₹50L</span> <span class="text-on-primary-container text-sm">Starts at</span></div>
@@ -298,7 +310,7 @@
 <button class="w-full bg-white text-primary py-3 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-surface-container-low transition-colors">Select Plan</button>
 </div>
 <!-- LUXURY -->
-<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col items-start shadow-sm">
+<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col items-start shadow-xl hover:-translate-y-2 reveal reveal-delay-200">
 <div class="text-tertiary font-workSans text-xs font-bold uppercase tracking-widest mb-2">Luxury Within Reach</div>
 <h3 class="font-manrope font-bold text-3xl text-primary mb-4">LUXURY</h3>
 <div class="mb-6"><span class="text-4xl font-extrabold text-on-background">₹1Cr+</span> <span class="text-on-surface-variant text-sm">Starts at</span></div>
@@ -322,7 +334,7 @@
 <p class="font-workSans text-on-surface-variant text-lg">Trust starts with transparency. Everything you need to know about building with us.</p>
 </div>
 <div class="space-y-6">
-<details class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 [&_summary::-webkit-details-marker]:hidden open:shadow-md transition-all">
+<details class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 [&_summary::-webkit-details-marker]:hidden open:shadow-md transition-all reveal">
 <summary class="flex justify-between items-center font-manrope font-bold text-lg text-primary cursor-pointer outline-none">
 Is Build Imara RERA registered?
 <span class="transition-transform duration-300 group-open:rotate-180 text-tertiary">
@@ -331,7 +343,7 @@ Is Build Imara RERA registered?
 </summary>
 <p class="font-workSans text-on-surface-variant mt-4 leading-relaxed">Yes, Build Imara is fully RERA registered. Your investment is protected by law. We provide all registration details upfront for your complete peace of mind.</p>
 </details>
-<details class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 [&_summary::-webkit-details-marker]:hidden open:shadow-md transition-all">
+<details class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 [&_summary::-webkit-details-marker]:hidden open:shadow-md transition-all reveal reveal-delay-100">
 <summary class="flex justify-between items-center font-manrope font-bold text-lg text-primary cursor-pointer outline-none">
 How much does Build Imara really cost?
 <span class="transition-transform duration-300 group-open:rotate-180 text-tertiary">
@@ -340,7 +352,7 @@ How much does Build Imara really cost?
 </summary>
 <p class="font-workSans text-on-surface-variant mt-4 leading-relaxed">We provide a transparent breakdown provided upfront. No hidden charges or surprise add-ons. Use our Cost Calculator or WhatsApp us your details for a personalized quote.</p>
 </details>
-<details class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 [&_summary::-webkit-details-marker]:hidden open:shadow-md transition-all">
+<details class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/10 [&_summary::-webkit-details-marker]:hidden open:shadow-md transition-all reveal reveal-delay-200">
 <summary class="flex justify-between items-center font-manrope font-bold text-lg text-primary cursor-pointer outline-none">
 How long does construction take?
 <span class="transition-transform duration-300 group-open:rotate-180 text-tertiary">
@@ -360,9 +372,9 @@ How long does construction take?
 <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 <div class="absolute bottom-0 left-0 w-64 h-64 bg-tertiary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 <div class="relative z-10 max-w-3xl mx-auto">
-<h2 class="font-manrope font-extrabold text-4xl md:text-6xl text-white mb-8">Ready to build your dream home?</h2>
-<p class="font-workSans text-on-primary-container text-lg md:text-xl mb-12 opacity-90">Our team is ready to discuss your vision, budget, and timeline for your Hyderabad home.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-6">
+<h2 class="font-manrope font-extrabold text-4xl md:text-6xl text-white mb-8 reveal">Ready to build your dream home?</h2>
+<p class="font-workSans text-on-primary-container text-lg md:text-xl mb-12 opacity-90 reveal reveal-delay-100">Our team is ready to discuss your vision, budget, and timeline for your Hyderabad home.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6 reveal reveal-delay-200">
 <button class="bg-white text-primary px-10 py-5 rounded-md font-manrope font-extrabold text-sm uppercase tracking-widest hover:bg-surface-container-lowest transition-all hover:scale-105 shadow-2xl">
                         Get Free Quote
                     </button>
@@ -469,6 +481,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener("scroll", updateNav);
     updateNav(); // initialize on load
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 });
 </script>
 </body></html>
