@@ -5,6 +5,7 @@ Build Imara is a static marketing website for a home construction business in Hy
 ## Overview
 
 This repository contains:
+
 - A landing page in `index.html`
 - Shared styles in `css/style.css`
 - Component styles in `css/components.css`
@@ -79,6 +80,7 @@ docker run -p 80:80 build-imara
 ```
 
 Then open:
+
 - `http://localhost`
 
 ## Run with Docker Compose
@@ -98,6 +100,7 @@ docker compose down
 The container uses Nginx to serve the static files.
 
 Key behavior from `nginx.conf`:
+
 - Serves files from `/usr/share/nginx/html`
 - Uses `index.html` as the entry file
 - Falls back to `index.html` for unmatched routes
@@ -108,6 +111,7 @@ Key behavior from `nginx.conf`:
 This project is ready for Dokploy.
 
 ### Option 1: Dockerfile deployment
+
 1. Connect this GitHub repository in Dokploy.
 2. Create a new application.
 3. Choose Dockerfile deployment.
@@ -117,6 +121,7 @@ This project is ready for Dokploy.
 7. Deploy.
 
 ### Option 2: Docker Compose deployment
+
 1. Connect this GitHub repository in Dokploy.
 2. Create a new application.
 3. Choose Docker Compose deployment.
