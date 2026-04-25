@@ -147,7 +147,7 @@
 <a class="nav-link font-manrope font-bold tracking-tight text-sm uppercase text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-all" href="#faq">FAQ</a>
 <a class="nav-link font-manrope font-bold tracking-tight text-sm uppercase text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-all" href="#contact">Contact</a>
 </div>
-<button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-md font-manrope font-bold text-sm uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20">
+<button onclick="openBooking('General')" class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2.5 rounded-md font-manrope font-bold text-sm uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-primary/20">
             Get Free Quote
         </button>
 </div>
@@ -176,12 +176,12 @@
                 Meet Build Imara - the builders Hyderabad trusts. 10 years. 200+ happy families. Zero shortcuts. 100% transparency.
             </p>
 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-md font-manrope font-bold text-sm uppercase tracking-widest shadow-xl transition-all hover:translate-y-[-2px] hover:shadow-primary/30">
+<button onclick="openBooking('General')" class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-md font-manrope font-bold text-sm uppercase tracking-widest shadow-xl transition-all hover:translate-y-[-2px] hover:shadow-primary/30">
                     Get Free Quote
                 </button>
-<button class="bg-surface/60 backdrop-blur-md border border-primary/20 text-primary px-8 py-4 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-surface-container-low transition-colors">
+<a href="#pricing" class="bg-surface/60 backdrop-blur-md border border-primary/20 text-primary px-8 py-4 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-surface-container-low transition-colors text-center">
                     View Plans
-                </button>
+                </a>
 </div>
 </div>
 <!-- Animated House Element -->
@@ -277,54 +277,127 @@
 </section>
 <!-- Pricing Section -->
 <section class="py-24 bg-surface-container-low" id="pricing">
-<div class="max-w-screen-xl mx-auto px-8">
+<div class="max-w-screen-2xl mx-auto px-8">
 <div class="text-center mb-16 max-w-2xl mx-auto">
-<h2 class="font-manrope font-extrabold text-5xl text-primary mb-6 leading-tight">Transparent <span class="italic font-light text-tertiary">Pricing</span></h2>
-<p class="font-workSans text-on-surface-variant text-lg">Choose the plan that fits your vision and budget. No hidden costs. 100% Build Imara Transparency.</p>
+<span class="inline-block px-4 py-1.5 bg-tertiary-container text-on-tertiary-fixed font-manrope font-bold text-xs uppercase tracking-widest rounded-full mb-4">Transparent Pricing</span>
+<h2 class="font-manrope font-extrabold text-5xl text-primary mb-6 leading-tight">Choose Your <span class="italic font-light text-tertiary">Package</span></h2>
+<p class="font-workSans text-on-surface-variant text-lg">Four expertly crafted packages. Zero hidden costs. 100% Build Imara Transparency.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- ECO -->
-<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col items-start shadow-xl hover:-translate-y-2 reveal">
-<div class="text-tertiary font-workSans text-xs font-bold uppercase tracking-widest mb-2">Sustainable & Budget</div>
-<h3 class="font-manrope font-bold text-3xl text-primary mb-4">ECO</h3>
-<div class="mb-6"><span class="text-4xl font-extrabold text-on-background">₹25L</span> <span class="text-on-surface-variant text-sm border-b-2 border-transparent">Starts at</span></div>
-<ul class="space-y-4 mb-8 font-workSans text-sm text-on-surface-variant flex-1">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> 800-1000 sqft Average</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> 10-12 months Timeline</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> Standard Customization</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> 2-Year Warranty</li>
+
+<!-- Package Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
+<!-- ESSENTIAL -->
+<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col shadow-xl hover:-translate-y-2 reveal" id="pkg-essential">
+<div class="text-tertiary font-workSans text-xs font-bold uppercase tracking-widest mb-2">Budget-Smart</div>
+<h3 class="font-manrope font-bold text-2xl text-primary mb-1">ESSENTIAL</h3>
+<p class="font-workSans text-xs text-on-surface-variant mb-4">Rental homes &amp; first-time budget builds</p>
+<div class="mb-2"><span class="text-3xl font-extrabold text-on-background font-manrope">₹1,700</span><span class="text-on-surface-variant text-sm"> /sqft</span></div>
+<p class="text-xs text-on-surface-variant mb-6 font-workSans italic">Strong foundation. Smart spending.</p>
+<ul class="space-y-3 mb-8 font-workSans text-sm text-on-surface-variant flex-1">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>M20 RCC + AAC Block walls</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Basic vitrified tiles (₹40/sqft)</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>2D Floor Plan + Basic Elevation</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Branded wiring + emulsion paint</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>10-ft ceiling height</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>10 yr structure + 5 yr waterproofing warranty</span></li>
 </ul>
-<button class="w-full bg-surface-container-highest text-primary py-3 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-primary-container hover:text-white transition-colors">Select Plan</button>
+<button onclick="openBooking('Essential')" class="w-full bg-surface-container-highest text-primary py-3 rounded-lg font-manrope font-bold text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Book Consultation</button>
 </div>
-<!-- MODULAR -->
-<div class="bg-primary rounded-2xl p-8 border border-primary text-white shadow-2xl flex flex-col items-start transform md:-translate-y-4 hover:-translate-y-6 transition-all reveal reveal-delay-100">
+
+<!-- CORE -->
+<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col shadow-xl hover:-translate-y-2 reveal reveal-delay-100" id="pkg-core">
+<div class="text-tertiary font-workSans text-xs font-bold uppercase tracking-widest mb-2">Balanced Quality</div>
+<h3 class="font-manrope font-bold text-2xl text-primary mb-1">CORE</h3>
+<p class="font-workSans text-xs text-on-surface-variant mb-4">End-use family homes</p>
+<div class="mb-2"><span class="text-3xl font-extrabold text-on-background font-manrope">₹1,950</span><span class="text-on-surface-variant text-sm"> /sqft</span></div>
+<p class="text-xs text-on-surface-variant mb-6 font-workSans italic">Better quality without overspending.</p>
+<ul class="space-y-3 mb-8 font-workSans text-sm text-on-surface-variant flex-1">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>M25 RCC + AAC/Red brick walls</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Double charged tiles (₹60/sqft)</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>2D Plan + Basic Elevation + Centerline</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Modular switches + putty &amp; emulsion</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>10-ft ceiling + false ceiling (160 sqft)</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>10 yr structure + 5 yr waterproofing warranty</span></li>
+</ul>
+<button onclick="openBooking('Core')" class="w-full bg-surface-container-highest text-primary py-3 rounded-lg font-manrope font-bold text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Book Consultation</button>
+</div>
+
+<!-- SMART LIVING -->
+<div class="bg-primary rounded-2xl p-8 border border-primary text-white shadow-2xl flex flex-col transform md:-translate-y-4 hover:-translate-y-6 transition-all reveal reveal-delay-200" id="pkg-smart">
 <div class="text-secondary-fixed font-workSans text-xs font-bold uppercase tracking-widest mb-2">Most Popular</div>
-<h3 class="font-manrope font-bold text-3xl mb-4">MODULAR</h3>
-<div class="mb-6"><span class="text-4xl font-extrabold text-white">₹50L</span> <span class="text-on-primary-container text-sm">Starts at</span></div>
-<ul class="space-y-4 mb-8 font-workSans text-sm text-on-primary-container flex-1 w-full">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="check_circle">check_circle</span> 1200-1500 sqft Average</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="check_circle">check_circle</span> 12-14 months Timeline</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="check_circle">check_circle</span> High Customization</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary-fixed text-sm" data-icon="check_circle">check_circle</span> Premium Materials</li>
+<h3 class="font-manrope font-bold text-2xl mb-1">SMART LIVING</h3>
+<p class="font-workSans text-xs text-on-primary-container mb-4">Homeowners wanting premium everyday living</p>
+<div class="mb-2"><span class="text-3xl font-extrabold text-white font-manrope">₹2,300</span><span class="text-on-primary-container text-sm"> /sqft</span></div>
+<p class="text-xs text-on-primary-container mb-6 font-workSans italic">Designed for comfort. Built for pride.</p>
+<ul class="space-y-3 mb-8 font-workSans text-sm text-on-primary-container flex-1">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">check_circle</span><span>High-grade RCC + Red brick (9" external)</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">check_circle</span><span>Large format/Marble/Granite (₹80/sqft)</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">check_circle</span><span>2D + 3D Elevation + Structural drawings</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">check_circle</span><span>Designer switches + premium emulsion</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">check_circle</span><span>11-ft ceiling + false ceiling (300 sqft)</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-secondary-fixed text-base mt-0.5">check_circle</span><span>Anti-termite + Teakwood doors &amp; windows</span></li>
 </ul>
-<button class="w-full bg-white text-primary py-3 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-surface-container-low transition-colors">Select Plan</button>
+<button onclick="openBooking('Smart Living')" class="w-full bg-white text-primary py-3 rounded-lg font-manrope font-bold text-sm uppercase tracking-widest hover:bg-surface-container-lowest transition-all">Book Consultation</button>
 </div>
-<!-- LUXURY -->
-<div class="bg-surface rounded-2xl p-8 border border-outline-variant/20 hover:border-primary/30 transition-all flex flex-col items-start shadow-xl hover:-translate-y-2 reveal reveal-delay-200">
-<div class="text-tertiary font-workSans text-xs font-bold uppercase tracking-widest mb-2">Luxury Within Reach</div>
-<h3 class="font-manrope font-bold text-3xl text-primary mb-4">LUXURY</h3>
-<div class="mb-6"><span class="text-4xl font-extrabold text-on-background">₹1Cr+</span> <span class="text-on-surface-variant text-sm">Starts at</span></div>
-<ul class="space-y-4 mb-8 font-workSans text-sm text-on-surface-variant flex-1">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> 2000-3000 sqft Average</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> 16-20 months Timeline</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> Unlimited Customization</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span> Investment Grade</li>
+
+<!-- ELEVATED LIVING -->
+<div class="bg-surface rounded-2xl p-8 border-2 border-tertiary/30 hover:border-tertiary/60 transition-all flex flex-col shadow-xl hover:-translate-y-2 reveal reveal-delay-300" id="pkg-elevated">
+<div class="text-tertiary font-workSans text-xs font-bold uppercase tracking-widest mb-2">Aspirational Premium</div>
+<h3 class="font-manrope font-bold text-2xl text-primary mb-1">ELEVATED LIVING</h3>
+<p class="font-workSans text-xs text-on-surface-variant mb-4">Premium homeowners &amp; statement homes</p>
+<div class="mb-2"><span class="text-3xl font-extrabold text-on-background font-manrope">₹2,750</span><span class="text-on-surface-variant text-sm"> /sqft</span></div>
+<p class="text-xs text-on-surface-variant mb-6 font-workSans italic">Premium spaces for elevated living.</p>
+<ul class="space-y-3 mb-8 font-workSans text-sm text-on-surface-variant flex-1">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Top-tier engineering + TATA steel</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Full body tiles/Marble/Granite (₹95/sqft)</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>2D + 3D + Full structural &amp; working drawings</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Jaquar/Grohe/Kohler fittings</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>11-ft ceiling + false ceiling (500 sqft) + POP</span></li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-base mt-0.5">check_circle</span><span>Copper gas + modular kitchen allowance</span></li>
 </ul>
-<button class="w-full bg-surface-container-highest text-primary py-3 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-primary-container hover:text-white transition-colors">Select Plan</button>
+<button onclick="openBooking('Elevated Living')" class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-lg font-manrope font-bold text-sm uppercase tracking-widest hover:brightness-110 transition-all shadow-lg">Book Consultation</button>
 </div>
+</div>
+
+<!-- Coming Soon: Luxury -->
+<div class="mt-6 bg-gradient-to-r from-tertiary-container/30 to-primary-container/20 rounded-2xl p-8 border border-tertiary/20 flex flex-col md:flex-row items-center justify-between gap-6 reveal">
+<div>
+<span class="inline-block px-3 py-1 bg-tertiary text-white font-manrope font-bold text-xs uppercase tracking-widest rounded-full mb-3">Coming Soon</span>
+<h3 class="font-manrope font-bold text-2xl text-primary mb-1">LUXURY COLLECTION</h3>
+<p class="font-workSans text-on-surface-variant text-sm">Bespoke luxury — signature finishes, smart home integration, imported materials, fully customised spaces.</p>
+</div>
+<button onclick="openBooking('Luxury')" class="shrink-0 bg-tertiary text-white px-8 py-3 rounded-lg font-manrope font-bold text-sm uppercase tracking-widest hover:bg-tertiary-container hover:text-on-tertiary-fixed transition-all">Join Waitlist</button>
+</div>
+
+<!-- Notes -->
+<div class="mt-10 bg-surface rounded-xl p-6 border border-outline-variant/20">
+<h4 class="font-manrope font-bold text-primary mb-4 text-sm uppercase tracking-widest">Important Notes</h4>
+<ol class="space-y-2 font-workSans text-xs text-on-surface-variant list-decimal list-inside">
+<li>Pricing calculated on built-up area &gt;1500 sqft. Smaller areas will be priced accordingly.</li>
+<li>Kitchen and bathroom fitting prices are per 1000 sqft of built-up area.</li>
+<li>All items not mentioned in specifications are excluded.</li>
+<li>Final price may vary based on plot/site conditions and chosen finishing items.</li>
+<li>All payments are milestone-based as per the contract.</li>
+</ol>
 </div>
 </div>
 </section>
+
+<!-- Cal.com Booking Modal -->
+<div id="booking-modal" class="fixed inset-0 z-[500] hidden items-center justify-center p-4" style="background:rgba(0,0,0,0.6);backdrop-filter:blur(6px)">
+<div class="bg-surface rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden flex flex-col" style="max-height:90vh">
+<div class="flex items-center justify-between px-6 py-4 border-b border-outline-variant/20">
+<div>
+<p class="font-workSans text-xs text-on-surface-variant uppercase tracking-widest">Book a Free Consultation</p>
+<h3 id="booking-modal-title" class="font-manrope font-bold text-xl text-primary">Package Consultation</h3>
+</div>
+<button onclick="closeBooking()" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div id="cal-booking-container" style="height:600px;overflow-y:auto"></div>
+</div>
+</div>
 
 <!-- FAQ Section -->
 <section class="py-24 bg-surface" id="faq">
@@ -375,7 +448,7 @@ How long does construction take?
 <h2 class="font-manrope font-extrabold text-4xl md:text-6xl text-white mb-8 reveal">Ready to build your dream home?</h2>
 <p class="font-workSans text-on-primary-container text-lg md:text-xl mb-12 opacity-90 reveal reveal-delay-100">Our team is ready to discuss your vision, budget, and timeline for your Hyderabad home.</p>
 <div class="flex flex-col sm:flex-row justify-center gap-6 reveal reveal-delay-200">
-<button class="bg-white text-primary px-10 py-5 rounded-md font-manrope font-extrabold text-sm uppercase tracking-widest hover:bg-surface-container-lowest transition-all hover:scale-105 shadow-2xl">
+<button onclick="openBooking('General')" class="bg-white text-primary px-10 py-5 rounded-md font-manrope font-extrabold text-sm uppercase tracking-widest hover:bg-surface-container-lowest transition-all hover:scale-105 shadow-2xl">
                         Get Free Quote
                     </button>
 <button class="border border-white/30 text-white px-10 py-5 rounded-md font-manrope font-bold text-sm uppercase tracking-widest hover:bg-white/10 transition-all text-center flex items-center justify-center gap-2">
@@ -439,7 +512,36 @@ How long does construction take?
 </div>
 </div>
 </footer>
+<!-- Cal.com Embed Script -->
+<script type="text/javascript">
+(function(C,A,L){let p=function(a,ar){a.q.push(ar)};let d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal;let ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement("script")).src=A;cal.loaded=true}if(ar[0]===L){const api=function(){p(api,arguments)};const namespace=ar[1];api.q=api.q||[];if(typeof namespace==="string"){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,["initNamespace",namespace])}else p(cal,ar);return}p(cal,ar)};})(window,"https://app.cal.com/embed/embed.js","init");
+Cal("init",{origin:"https://app.cal.com"});
+</script>
 <script>
+function openBooking(packageName) {
+  const modal = document.getElementById('booking-modal');
+  const title = document.getElementById('booking-modal-title');
+  const container = document.getElementById('cal-booking-container');
+  title.textContent = packageName + ' Package — Free Consultation';
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  container.innerHTML = '';
+  Cal("inline", {
+    elementOrSelector: "#cal-booking-container",
+    calLink: "syed-salman-3zq4k8/15min",
+    layout: "month_view"
+  });
+  Cal("ui", {styles:{branding:{brandColor:"#003a53"}},hideEventTypeDetails:false});
+}
+function closeBooking() {
+  const modal = document.getElementById('booking-modal');
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+  document.getElementById('cal-booking-container').innerHTML = '';
+}
+document.getElementById('booking-modal').addEventListener('click', function(e){
+  if(e.target === this) closeBooking();
+});
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll("#nav-links .nav-link");

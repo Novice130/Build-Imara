@@ -17,3 +17,22 @@ services:
       timeout: 5s
       retries: 3
       start_period: 10s
+
+  webhook:
+    build:
+      context: ./webhook
+      dockerfile: Dockerfile
+    container_name: build-imara-webhook
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    environment:
+      - RESEND_API_KEY=re_LjsPaaur_EcwbCvYqG5nZg2RyZWnds2Ch
+      - NOTIFY_EMAIL=syedsalman726@gmail.com
+      - PORT=3001
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3001/health >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
