@@ -1,0 +1,7 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "build-imara"
+compatibility_date = "2025-09-27"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./"

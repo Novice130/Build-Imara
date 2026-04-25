@@ -1,0 +1,12 @@
+.git
+.wrangler
+webhook
+node_modules
+Dockerfile
+docker-compose.yml
+.dockerignore
+nginx.conf
+HANDOFF.md
+PACKAGES.xlsx
+README.md
+wrangler.toml
