@@ -56,9 +56,18 @@ export default {
 
         const script = `
           <script>
-            const message = "authorization:${provider}:success:{\\"token\\":\\"${token}\\",\\"provider\\":\\"${provider}\\"}";
-            window.opener.postMessage(message, "*");
-            window.close();
+            const token = "${token}";
+            const provider = "${provider}";
+            const msgString = "authorization:" + provider + ":success:{\\"token\\":\\"" + token + "\\",\\"provider\\":\\"" + provider + "\\"}";
+            
+            if (window.opener) {
+              window.opener.postMessage(msgString, "*");
+              window.opener.postMessage(msgString, window.location.origin);
+            }
+            
+            setTimeout(function() {
+              window.close();
+            }, 500);
           </script>
         `;
 
