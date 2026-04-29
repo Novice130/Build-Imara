@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Novice130/Build-Imara
   branch: main
-  base_url: "" # Empty string forces Decap CMS to use our Cloudflare Functions on the current domain
+  base_url: https://buildimara.com
 
 media_folder: "assets/blog" # Media files will be stored in the repo under this directory
 public_folder: "/assets/blog" # The src attribute for uploaded media will begin with this
