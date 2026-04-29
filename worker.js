@@ -68,9 +68,7 @@ export default {
       } catch (error) {
         const script = `
           <script>
-            const message = "authorization:${provider}:error:{\\"message\\":\\"${error.message}\\"}";
-            window.opener.postMessage(message, "*");
-            window.close();
+            document.write("<h1>Authentication Error</h1><p>${error.message}</p><p>Please check your GitHub Client Secret in Cloudflare Environment Variables.</p>");
           </script>
         `;
         return new Response(script, {
