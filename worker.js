@@ -57,7 +57,7 @@ export default {
         const script = `
           <script>
             const message = "authorization:${provider}:success:{\\"token\\":\\"${token}\\",\\"provider\\":\\"${provider}\\"}";
-            window.opener.postMessage(message, new URL(window.location.origin).origin);
+            window.opener.postMessage(message, "*");
             window.close();
           </script>
         `;
@@ -69,7 +69,7 @@ export default {
         const script = `
           <script>
             const message = "authorization:${provider}:error:{\\"message\\":\\"${error.message}\\"}";
-            window.opener.postMessage(message, new URL(window.location.origin).origin);
+            window.opener.postMessage(message, "*");
             window.close();
           </script>
         `;
