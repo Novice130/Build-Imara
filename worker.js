@@ -72,7 +72,12 @@ export default {
         `;
 
         return new Response(script, {
-          headers: { 'Content-Type': 'text/html;charset=UTF-8' },
+          headers: { 
+            'Content-Type': 'text/html;charset=UTF-8',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0'
+          },
         });
       } catch (error) {
         const script = `
@@ -81,7 +86,12 @@ export default {
           </script>
         `;
         return new Response(script, {
-          headers: { 'Content-Type': 'text/html;charset=UTF-8' },
+          headers: { 
+            'Content-Type': 'text/html;charset=UTF-8',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0'
+          },
         });
       }
     }
