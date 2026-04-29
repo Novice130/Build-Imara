@@ -1,0 +1,27 @@
+{
+  "name": "build_imara",
+  "version": "1.0.0",
+  "description": "Build Imara is a static marketing website for a home construction business in Hyderabad. The project is built with plain HTML, CSS, and JavaScript, and is prepared for containerized deployment with Docker, Nginx, and Dokploy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node scripts/build-blog.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Novice130/Build-Imara.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Novice130/Build-Imara/issues"
+  },
+  "homepage": "https://github.com/Novice130/Build-Imara#readme",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.2",
+    "sharp": "^0.34.5"
+  }
+}

@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: Novice130/Build-Imara
+  branch: main
+  base_url: "" # Empty string forces Decap CMS to use our Cloudflare Functions on the current domain
+
+media_folder: "assets/blog" # Media files will be stored in the repo under this directory
+public_folder: "/assets/blog" # The src attribute for uploaded media will begin with this
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", hint: "The main title of the blog post (H1). Ensure it's SEO friendly."}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Meta Description", name: "description", widget: "text", hint: "Short description for SEO and social sharing (150-160 characters recommended)."}
+      - {label: "Thumbnail Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Image Alt Text", name: "altText", widget: "string", required: false, hint: "Describe the image for accessibility and SEO."}
+      - {label: "Body", name: "body", widget: "markdown"}

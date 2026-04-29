@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Build Imara</title>
+  <meta name="description" content="Read the latest insights and guides on home construction from Build Imara.">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Work+Sans:wght@400..700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#003a53",
+              "primary-container": "#005274",
+              surface: "#fcf9f2",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Work Sans"],
+            }
+          }
+        }
+      }
+  </script>
+</head>
+<body class="bg-surface font-body text-gray-800">
+  <nav class="w-full bg-white shadow-sm px-8 py-6 flex items-center justify-between max-w-screen-2xl mx-auto">
+    <a href="/" class="flex items-center gap-2">
+      <img src="../assets/logo.png" alt="Build Imara Logo" class="h-8 w-auto">
+      <div class="text-2xl font-headline font-extrabold text-primary">Build Imara</div>
+    </a>
+    <a href="/" class="font-headline font-bold text-sm uppercase text-gray-600 hover:text-primary">Back to Home</a>
+  </nav>
+
+  <main class="max-w-screen-xl mx-auto px-8 py-16">
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-headline font-extrabold text-primary mb-4">Our Blog</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Latest updates, construction tips, and insights from the experts at Build Imara.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow border border-gray-100 flex flex-col h-full">
+      
+      <div class="p-6 flex-grow flex flex-col">
+        <h2 class="text-2xl font-headline font-bold text-primary mb-2">The Ultimate Guide to Building Your Dream Home in Hyderabad</h2>
+        <p class="text-gray-600 text-sm mb-4 line-clamp-3">Discover the essential steps, costs, and timeline involved in constructing a home in Hyderabad. Build Imara's expert guide for first-time builders.</p>
+        <div class="mt-auto flex justify-between items-center">
+            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">5/1/2026</span>
+            <a href="/blog/2026-05-01-building-your-dream-home.html" class="text-primary font-bold text-sm uppercase tracking-widest hover:text-primary-container inline-block">Read More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+  </main>
+</body>
+</html>

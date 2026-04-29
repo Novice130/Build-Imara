@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detailed Package Specifications | Build Imara</title>
+<meta name="description" content="Compare Build Imara's construction packages — Essential, Core, Smart Living, and Elevated Living — with full detailed specifications.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Work+Sans:wght@0,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:"#003a53","primary-container":"#005274",surface:"#fcf9f2","surface-container-low":"#f6f3ec","on-surface-variant":"#40484d",tertiary:"#572900","tertiary-container":"#793c00","on-tertiary-fixed":"#301400","outline-variant":"#c0c7ce"},fontFamily:{headline:["Manrope"],body:["Work Sans"]}}}}</script>
+<style>
+body{font-family:'Work Sans',sans-serif;background:#fcf9f2;margin:0}
+.font-manrope{font-family:'Manrope',sans-serif}
+.spec-table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+.spec-table td{padding:12px 16px;border-bottom:1px solid #e5e2db;text-align:left;vertical-align:top}
+.spec-table td:first-child{font-weight:600;color:#003a53;white-space:nowrap;width:160px;background:#faf8f3}
+.spec-table tr:hover td{background:#f0ede6}
+.cat-header{background:linear-gradient(135deg,#003a53,#005274);color:#fff;padding:16px 20px;border-radius:12px 12px 0 0;font-family:'Manrope',sans-serif;font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:0.1em;margin-top:32px;display:flex;align-items:center;gap:8px}
+.cat-header .material-symbols-outlined{font-size:20px}
+.table-wrap{border:1px solid #e5e2db;border-top:none;border-radius:0 0 12px 12px;overflow-x:auto;margin-bottom:8px}
+@media(max-width:768px){.spec-table{font-size:11px;table-layout:auto}.spec-table td{padding:6px 8px}}
+#pkg-nav{position:sticky;top:78px;z-index:40;display:flex;justify-content:center;padding:12px 16px;transform:translateY(-30px);opacity:0;pointer-events:none;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1),opacity 0.4s ease}
+#pkg-nav.visible{transform:translateY(0);opacity:1;pointer-events:auto}
+#pkg-nav-inner{display:grid;grid-template-columns:160px 1fr 1fr 1fr 1fr;width:100%;max-width:1280px;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(0,58,83,0.08);border-radius:14px;padding:4px 0;box-shadow:0 4px 30px rgba(0,0,0,0.06);align-items:center}
+#pkg-nav .nav-spacer{padding:8px 16px;font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:#003a53;opacity:0}
+#pkg-nav a{padding:8px 16px;border-radius:10px;font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#003a53;text-decoration:none;transition:all 0.25s cubic-bezier(0.22,1,0.36,1);white-space:nowrap;text-align:left;margin:0 4px}
+#pkg-nav a:hover{background:rgba(0,58,83,0.06)}
+#pkg-nav a.active{background:#003a53;color:#fff;box-shadow:0 2px 8px rgba(0,58,83,0.25)}
+@media(max-width:768px){#pkg-nav-inner{grid-template-columns:1fr 1fr 1fr 1fr;gap:4px}#pkg-nav .nav-spacer{display:none}}
+html{scroll-behavior:smooth}
+</style>
+</head><body>
+<nav class="w-full bg-white/90 backdrop-blur-xl shadow-sm px-8 py-5 flex items-center justify-between sticky top-0 z-50">
+<a href="/" class="flex items-center gap-2"><img src="assets/logo.png" alt="Build Imara Logo" class="h-8"><div class="text-2xl font-manrope font-extrabold text-primary">Build Imara</div></a>
+<a href="/#pricing" class="font-manrope font-bold text-sm uppercase text-gray-500 hover:text-primary">← Back to Plans</a>
+</nav>
+<!-- Sticky Package Nav (hidden initially, slides in on scroll) -->
+<div id="pkg-nav">
+<div class="max-w-screen-xl mx-auto w-full px-4">
+<div id="pkg-nav-inner">
+<span class="nav-spacer">Specification</span>
+<a href="#essential" data-pkg="essential">Essential</a>
+<a href="#core" data-pkg="core">Core</a>
+<a href="#smart-living" data-pkg="smart-living">Smart Living</a>
+<a href="#elevated-living" data-pkg="elevated-living">Elevated Living</a>
+</div>
+</div>
+</div>
+<header id="hero-header" class="py-16 text-center px-8">
+<span class="inline-block px-4 py-1.5 bg-[#793c00] text-[#ffdcc5] font-manrope font-bold text-xs uppercase tracking-widest rounded-full mb-4">Full Comparison</span>
+<h1 class="font-manrope font-extrabold text-4xl md:text-5xl text-primary mb-4">Detailed Package Specifications</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Every material. Every brand. Every detail. Compare all four Build Imara packages side-by-side.</p>
+</header>
+<main class="max-w-screen-xl mx-auto px-4 pb-24" id="specs-container"></main>
+<footer class="text-center py-8 text-sm text-gray-400 border-t">&copy; 2024 Build Imara. Quality Homes. Affordable Prices. Your Trust.</footer>
+<script>
+const P=["ESSENTIAL @ ₹1,700/sqft","CORE @ ₹1,950/sqft","SMART LIVING @ ₹2,300/sqft","ELEVATED LIVING @ ₹2,750/sqft"];
+const D=[
+{n:"Design",icon:"architecture",rows:[
+["Architectural","2D Floor Plan + Basic Elevation","2D Floor Plan + Basic Elevation","2D Floor Plan + 3D Elevation","2D Floor Plan + 3D Elevation"],
+["Structural","Not Included","Centerline drawings","Structural drawings","Structural drawings"],
+["Additional","Not Included","Not Included","Detailed working drawings","Detailed working drawings"]]},
+{n:"RCC Structure",icon:"foundation",rows:[
+["Steel","STANDARD","SHREE / Equivalent","SHREE, RADHA / Equivalent","TATA / Equivalent"],
+["Cement","Bharathi / Birla / Maha","Birla A1 / Ultratech / ACC","Birla A1 / Ultratech / ACC","Birla A1 / Ultratech / ACC"],
+["Aggregates","Fine Aggregate : M sand Coarse Aggregate: 20, 40 mm","Fine Aggregate : River sand Coarse Aggregate: 20, 40 mm","Fine Aggregate : River sand Coarse Aggregate: 20, 40 mm","Fine Aggregate : River sand Coarse Aggregate: 20, 40 mm"],
+["Concrete Grade","M20","M25","As Per Design","As Per Design"],
+["Ceiling Height","10 ft","10 ft","11 ft","11 ft"]]},
+{n:"Masonry",icon:"wall_art",rows:[
+["Block Work","AAC Block","AAC Block / Red Brick","Red Brick","Red Brick"],
+["Wall Thickness",'Internal: 4" External: 6"','Internal: 4" External: 9"','Internal: 4" External: 9"','Internal: 4" External: 9"'],
+["Cement","Bharathi / Birla / Maha","Birla A1 / Ultratech / ACC","Birla A1 / Ultratech / ACC","Birla A1 / Ultratech / ACC"],
+["Internal Plaster","Single layer smooth finish","Double layer smooth finish","Double layer smooth finish","Double layer smooth finish"],
+["External Plaster","Double layer with smooth finish","Double layer with smooth finish","Double layer with smooth finish","Double layer with smooth finish"]]},
+{n:"Flooring",icon:"grid_on",rows:[
+["Living Material","Basic Vitrified tiles","Double Charged tiles","Large format / Granite / Marble","Full body / Granite / Marble"],
+["Cost","₹40 per sqft","₹60 per sqft","₹80 per sqft","₹95 per sqft"],
+["Brand","Standard","Kajaria / Somany","Kajaria / Somany","Kajaria / Somany"],
+["Adhesive","Cement","Cement","Tile Adhesive","Tile Adhesive"],
+["Grout","White Cement","Polymer","Epoxy","Epoxy"]]},
+{n:"Kitchen",icon:"countertops",rows:[
+["Countertop","Granite @ ₹70/sqft","Granite @ ₹85/sqft","Granite @ ₹120/sqft","Granite @ ₹180/sqft"],
+["Wall Dado","Upto 4' @ ₹20/sqft","Upto 4' @ ₹30/sqft","Upto 4' @ ₹45/sqft","Upto 4' @ ₹60/sqft"],
+["Sink","Single SS 202 Sink Bowl","Single SS 304 Sink Bowl","Double SS 304 Sink Bowl","Double SS 304 Sink Bowl"],
+["CP Fittings","Upto ₹1,000","Upto ₹1,500","Upto ₹2,000","Upto ₹2,500"],
+["Modular Kitchen","Not Included","Not Included","Not Included","Upto ₹50,000"]]},
+{n:"Bathroom",icon:"bathtub",rows:[
+["Pipes","CPVC (Ashirvad / Equivalent)","CPVC (Ashirvad / Equivalent)","CPVC (Ashirvad / Equivalent)","CPVC (Ashirvad / Equivalent)"],
+["Wall Dado","Ceramic Tiles Upto 7' @ ₹20/sqft","Ceramic Tiles Upto 7' @ ₹30/sqft","Ceramic Tiles Upto 7' @ ₹45/sqft","Ceramic Tiles Upto 7' @ ₹60/sqft"],
+["Flooring","Anti Skid Ceramic Tiles @ ₹40/sqft","Anti Skid Ceramic Tiles @ ₹60/sqft","Anti Skid Ceramic Tiles / Granite / Marble @ ₹80/sqft","Anti Skid Ceramic Tiles / Granite / Marble @ ₹95/sqft"],
+["Sanitary & CP Fittings","Hindware basic / Gravity / Equivalent Upto ₹20,000","Cera / Parryware / Gravity Upto ₹30,000","Cera premium / Jaquar basic Upto ₹55,000","Jaquar / Kohler / Equivalent premium Upto ₹75,000"],
+["Waterproofing","Cement Mortar","Cement Mortar with SBR Latex","Cement Mortar with SBR Latex","Fibermesh + Cement Mortar with SBR Latex / URP"],
+["Accessories","Not Included","Upto ₹3,000","Upto ₹5,000","Upto ₹7,000"]]},
+{n:"Electrical",icon:"electrical_services",rows:[
+["Conduits","Sudhakar / Equivalent","Sudhakar or Higher","Sudhakar or Higher","Sudhakar or Higher"],
+["Wiring","Bullet / Equivalent","Bullet / Anchor / RR / Equivalent","Finolex / Anchor / RR / Equivalent","Finolex / Anchor / RR / Equivalent"],
+["Switches & Sockets","Maru miracle / Equivalent","Anchor Penta / Equivalent","Anchor / Gold Medal / Equivalent","Anchor / Gold Medal / Legrand / Equivalent"],
+["AC Provision","1 Point","2 Points","3 Points","3+ Points (as applicable)"],
+["TV Points","Yes","Yes","Yes","Yes"],
+["Geyser Points","Yes","Yes","Yes","Yes"],
+["Washing Machine Point","Not Included","Yes","Yes","Yes"],
+["Refrigerator Point","Yes","Yes","Yes","Yes"],
+["Chimney Point","Not Included","Yes","Yes","Yes"],
+["Video Door Phone","Not Included","Not Included","Yes","Yes"],
+["Inverter Provision","Not Included","Yes","Yes","Yes"],
+["EV Charger","Not Included","Not Included","Not Included","Yes"]]},
+{n:"Painting",icon:"format_paint",rows:[
+["Wall Finish","Cement Plaster","Standard Wall Putty (Birla / Jk / Equivalent)","Standard Wall Putty (Birla / Jk / Equivalent)","Waterproof Wall Putty (Birla / Jk / Equivalent)"],
+["Interior Paint","Tractor Emulsion","Tractor Shyne Emulsion","Apcolite Premium Emulsion","Apcolite Advanced Premium Emulsion, Royale Emulsion or Higher"],
+["Exterior Paint","Ace","Ace","Apex","Apex Advanced / Ultima"],
+["Additional","Not Included","Not Included","Royale Play upto 200 sft","Royale Play upto 300 sft"],
+["Waterproofing","Not Included","Asian Paints Damp Proof","Asian Paints Damp Proof","Asian Paints Damp Proof"]]},
+{n:"Doors & Windows",icon:"door_front",rows:[
+["Main Door","Flush Door with Veneer & Teakwood Frame with door kit upto ₹15,000","Teakwood Door & Teakwood frame with door kit upto ₹20,000","Teakwood Door & Teakwood frame with door kit upto ₹35,000","Teakwood Door & Teakwood frame with door kit upto ₹45,000"],
+["Internal Door","Flush Door with Laminate Finish & Salwood Frame with door kit upto ₹9,000","Flush Door with Laminate Finish & Teakwood Frame with door kit upto ₹12,000","Flush Door with Veneer & Teakwood Frame with door kit upto ₹12,000","Flush Door with Veneer & Teakwood Frame with door kit upto ₹14,000"],
+["Prayer Room Door","Not Included","Not Included","Flush Door with Laminate Finish & Teakwood Frame with door kit upto ₹12,000","Flush Door with Veneer & Teakwood Frame with door kit upto ₹14,000"],
+["Windows","2-track Aluminium Windows @ ₹400/sqft","3-track Aluminium Windows @ ₹400/sqft","Teakwood Windows basic / UPVC Windows basic @ ₹550/sqft","Teakwood Windows premium / UPVC Windows premium @ ₹800/sqft"],
+["Window Grills","Basic Design MS Grills","Basic Design MS Grills","Basic Design MS Grills","Basic Design MS Grills"],
+["Glasswork","5mm Clear Glass","5mm Clear Glass","5mm Tinted Glass","5mm Tinted Double Glass"]]},
+{n:"Staircase",icon:"stairs",rows:[
+["Flooring","Polish Stone @ ₹40/sqft","Granite @ ₹70/sqft","Granite @ ₹85/sqft","Granite @ ₹110/sqft"],
+["Railing","MS Medium Grade","MS Premium Grade / SS 202","MS Premium Grade / SS 304","MS Premium Grade with Wooden Handrail / SS 304 with glass"]]},
+{n:"Ceiling",icon:"roofing",rows:[
+["False Ceiling","Not Included","Living Room Upto 160 sft","Living Room + 1 Bedroom Upto 300 sqft","Living Room + 2 Bedroom Upto 500 sqft"],
+["POP","Not Included","Not Included","POP Décor Upto ₹4,000","POP Décor Upto ₹10,000"]]},
+{n:"Terrace",icon:"deck",rows:[
+["Flooring","Plain Cement Mortar","Plain Cement Mortar","Anti Skid Tiles","Anti Skid Tiles / Terrazo"],
+["Water Tank","1000 Ltrs","1000 Ltrs","2000 Ltrs","2000 Ltrs"],
+["Waterproofing","Cement Mortar","Cement Mortar with SBR Latex","Cement Mortar with SBR Latex","Fibermesh + Cement Mortar with SBR Latex / URP"]]},
+{n:"Additional Features",icon:"add_circle",rows:[
+["Underground Water Tank","2000 Ltrs","3500 Ltrs","5000 Ltrs","7000 Ltrs"],
+["Anti Termite Treatment","Not Included","Not Included","Yes","Yes"],
+["Copper Gas Connection","Not Included","Not Included","Not Included","Yes"]]},
+{n:"Execution & Warranty",icon:"verified",rows:[
+["Site Supervision","Dedicated Site Engineer","Dedicated Site Engineer","Dedicated Site Engineer","Dedicated Site Engineer"],
+["Updates","Weekly progress updates","Weekly progress updates","Weekly progress updates","Weekly progress updates"],
+["Material Tracking","Transparent material usage","Transparent material usage","Transparent material usage","Transparent material usage"],
+["Timeline","Defined construction schedule","Defined construction schedule","Defined construction schedule","Defined construction schedule"],
+["Structure Warranty","10 Years","10 Years","10 Years","10 Years"],
+["Waterproofing Warranty","5 Years","5 Years","5 Years","5 Years"],
+["Any Other Product Warranty","As per Manufacturers policy","As per Manufacturers policy","As per Manufacturers policy","As per Manufacturers policy"]]},
+{n:"Exclusions",icon:"block",rows:[
+["Lift (Can be upgraded)","Not Included","Not Included","Not Included","Not Included"],
+["Compound Wall (Can be upgraded)","Not Included","Not Included","Not Included","Not Included"],
+["Borewell (Can be upgraded)","Not Included","Not Included","Not Included","Not Included"],
+["Modular Furniture (Can be upgraded)","Not Included","Not Included","Not Included","Not Included"],
+["Interior Design (Can be upgraded)","Not Included","Not Included","Not Included","Not Included"],
+["Government Approvals","Not Included","Not Included","Not Included","Not Included"],
+["External Development Works","Not Included","Not Included","Not Included","Not Included"]]}
+];
+const S=["Essential","Core","Smart Living","Elevated Living"];
+const c=document.getElementById('specs-container');
+D.forEach(cat=>{
+let h=`<div class="cat-header"><span class="material-symbols-outlined">${cat.icon}</span>${cat.n}</div><div class="table-wrap"><table class="spec-table"><tbody>`;
+cat.rows.forEach(r=>{
+h+=`<tr><td>${r[0]}</td>`;
+for(let i=1;i<=4;i++){
+let v=r[i]||'';
+let cls=v==='Not Included'?' style="color:#ba1a1a;opacity:0.7"':v==='Yes'?' style="color:#1b6d24;font-weight:600"':'';
+if(v==='Yes')v='✓ Included';
+if(v==='Not Included')v='✗ Not Included';
+h+=`<td${cls}>${v}</td>`;
+}
+h+=`</tr>`;
+});
+h+=`</tbody></table></div>`;
+c.innerHTML+=h;
+});
+// Add anchors
+const ids=['essential','core','smart-living','elevated-living'];
+document.querySelectorAll('.cat-header').forEach((el,i)=>{if(i===0)el.id='essential';});
+// Sticky nav: show when header scrolls out
+const obs=new IntersectionObserver(([e])=>{
+  document.getElementById('pkg-nav').classList.toggle('visible',!e.isIntersecting);
+},{threshold:0,rootMargin:'-68px 0px 0px 0px'});
+obs.observe(document.getElementById('hero-header'));
+// Active pill highlight on click
+const navLinks=document.querySelectorAll('#pkg-nav a');
+navLinks.forEach(a=>a.addEventListener('click',function(){
+  navLinks.forEach(l=>l.classList.remove('active'));
+  this.classList.add('active');
+}));
+</script>
+</body></html>
